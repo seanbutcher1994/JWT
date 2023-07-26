@@ -26,5 +26,15 @@ export const Auth = {
         } catch (error: any) {
             console.error("Error: ", error)
         }
+    },
+    verifyRefreshToken: function (refreshToken: string) {
+        try {
+            const decodedToken = jwt.verify(refreshToken, secret)
+            return decodedToken;
+        } catch (error) {
+            console.log("Invalid refresh token", error)
+            console.error("Error: ", error)
+            return null;
+        }
     }
 }
