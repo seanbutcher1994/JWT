@@ -18,5 +18,13 @@ export const Auth = {
         } catch (error) {
             console.error("Error: ", error)
         }
+    },
+    // Function to return a jwt refreshToken (repeat of previous function but with refreshExpiration time)
+    signRefreshToken: function (data) {
+        try {
+            return jwt.sign(data, secret, {expiresIn: refreshExpiration})
+        } catch (error) {
+            console.error("Error: ", error)
+        }
     }
 }
