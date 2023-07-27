@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "types": ["node"],
+      "target": "es6",
+      "module": "commonJs",
+      "outDir": "dist"
+    },
+    "include": ["*.ts"],
+    "lib": ["es2015"]
+  }
+  
