@@ -7,8 +7,7 @@
 		"start": "NODE_ENV=production node dist/server.js",
 		"build": "tsc",
 		"develop": "NODE_ENV=development ts-node --esm server.ts",
-		"watch": "nodemon server.ts",
-		"test": "jest"
+		"watch": "nodemon server.ts"
 	},
 	"author": "",
 	"license": "ISC",
