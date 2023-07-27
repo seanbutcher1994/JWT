@@ -1,5 +1,5 @@
 import {Request, Response, NextFunction} from "express";
-import jwt from "jsonwebtoken";
+const jwt = require('jsonwebtoken')
 
 const verifyToken = (req: Request, res: Response, next: NextFunction) => {
     // Pull token from the headers
@@ -23,3 +23,5 @@ const verifyToken = (req: Request, res: Response, next: NextFunction) => {
         return res.status(500).json({message: error.message})
     }
 }
+
+export default verifyToken
